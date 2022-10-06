@@ -26,7 +26,7 @@
     <label for="divide">/</label>
     <input type ="radio" id="divide" name="divide" value="divide" onclick="chooseOp()"> <br>
 
-    <label for="exponent">*</label>
+    <label for="exponent">**</label>
     <input type ="radio" id="exponent" name="exponent" value="exponent" onclick="chooseOp()"> <br>
 
     <input type="button" class="btn-btn-success" onclick="chooseOp()" value="get the values">
@@ -58,7 +58,7 @@
         document.getElementById("result1").innerHTML="Amount/discount="+base/value1
       }
       else if(exp){
-        document.getElementById("result1").innerHTML="Amount**discount="+base*value1
+        document.getElementById("result1").innerHTML="Amount**discount="+base**value1
       }
 
    }

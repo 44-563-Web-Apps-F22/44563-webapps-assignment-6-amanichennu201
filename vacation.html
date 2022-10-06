@@ -50,14 +50,13 @@ function selectvacation(){
     <input type ="text" id="city" name="propertyname"  value="city"> <br>
 
     <label for="price">Enter price</label>
-    <input type ="text" id="price" name="vacationtime"  value="true"> <br>
-    
-    <input type="button" class="btn btn-success" onclick="updatevacation()">
+    <input type ="number" id="price" name="vacationtime"> <br>
+
+    <input type="button" class="btn btn-success" value="update the vacation" onclick="updatevacation()">
     <p id="result">A vacation is selected and also updated</p>
 </form>
 <script> 
    function updatevacation(){
-       console.log("vacation time")
        city = document.getElementById("city").value;
        price = document.getElementById("price").value;
        my_vacation["city"]=city;
