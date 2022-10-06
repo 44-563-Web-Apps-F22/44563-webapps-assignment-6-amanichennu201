@@ -10,7 +10,7 @@
     <input type ="number" id="basevalue" name="basevalue"  value=20> <br>
 
     <label for="discountvalue">Enter the discount percentage</label>
-    <input type ="number" id="dicount value" name="dicount value" value=10> <br>
+    <input type ="number" id="discountvalue" name="dicount value" value=10> <br>
 
     <input type="button" class="btn-btn-success" onclick="discount()" value="Apply discount">
 </form><br>
@@ -28,17 +28,19 @@
 
     <label for="exponent">*</label>
     <input type ="radio" id="exponent" name="exponent" value="exponent" onclick="chooseOp()"> <br>
+
+    <input type="button" class="btn-btn-success" onclick="chooseOp()" value="get the values">
+
 </form>
- <p id="result">This results will be displayed here</p><br>
  <script> 
  function  discount(){
     console.log("Getting form values")
-    basevalue = document.getElementById("basevalue").value
-    value = document.getElementById("discountvalue").value
+    var basevalue = document.getElementById("basevalue").value
+    var disc_value = document.getElementById("discountvalue").value
        result="";
        for(let i=1;i<=5;i++)
        {
-        result+=(basevalue*i)-((basevalue*i)*value/100)
+        result+=(basevalue*i)-((basevalue*i)*disc_value/100)
         result+=" "
        }
        document.getElementById("result").innerHTML="Discounted amounts for base"+basevalue+"are"+result
