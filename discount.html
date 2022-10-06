@@ -29,10 +29,9 @@
     <label for="exponent">*</label>
     <input type ="radio" id="exponent" name="exponent" value="exponent" onclick="chooseOp()"> <br>
 </form>
-
-<script> 
-
-function  discount(){
+ <p id="result">This results will be displayed here</p><br>
+ <script> 
+ function  discount(){
     console.log("Getting form values")
     basevalue = document.getElementById("basevalue").value
     value = document.getElementById("discountvalue").value
