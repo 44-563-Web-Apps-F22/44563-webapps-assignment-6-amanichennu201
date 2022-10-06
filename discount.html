@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+
+<h2>Amani computes discounts</h2>
+
+<form>
+    <label for="basevalue">Enter base amount</label>
+    <input type ="number" id="basevalue" name="basevalue"  value=20> <br>
+
+    <label for="discountvalue">Enter the discount percentage</label>
+    <input type ="number" id="dicount value" name="dicount value" value="10"> <br>
+
+    <input type="button" class="btn-btn-success" onclick="discount()" value="Apply discount">
+</form>
+
+
+<p id="result">This results will be displayed here</p>
+
+<script> 
+
+function  discount(){
+    console.log("Getting form values")
+    basevalue = document.getElementById("basevalue").value
+    value = document.getElementById("discountvalue").value
+       result="";
+       for(let i=1;i<=5;i++)
+       {
+        result+=(basevalue*i)-((basevalue*i)*value/100)
+        result+=" "
+       }
+       document.getElementById("result").innerHTML="Discounted amounts for base"+basevalue+"are"+result
+   }
+   function chooseOp(){
+    base=document.getElementById("basevalue").value
+    value1=document.getElementById("discountvalue").value
+    mul=document.getElementById("multiply").Checked
+    div=document.getElementById("divide").Checked
+    exp=document.getElementById("exponent").Checked
+     if(mul){
+        document.getElementById("result1").innerHTML="Amount*discount="+base*value1
+     }
+      else if(div){
+        document.getElementById("result1").innerHTML="Amount/discount="+base/value1
+      }
+      else if(exp){
+        document.getElementById("result1").innerHTML="Amount*discount="+base*value1
+      }
+
+   }
+
+</script>
+
+</body>
+</html> 
